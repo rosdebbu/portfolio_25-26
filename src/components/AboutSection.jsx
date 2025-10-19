@@ -12,20 +12,17 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Passionate Web Developer & 
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              "The first principle is that you must not fool yourself—and you are the easiest person to fool." — Richard Feynman
             </p>
+            This principle is my guide as a Computer Science student at SRMIST (2028). For me, front-end development is a constant exercise in intellectual honesty. A bug isn't a failure; it's the code telling you that your understanding is incomplete. I embrace these moments because they force me to dismantle my assumptions, confront the truth of the problem, and build a solution based on a deeper, more robust understanding. This commitment to not fooling myself is how I ensure I am always genuinely learning and growing.
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+             
+             
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
