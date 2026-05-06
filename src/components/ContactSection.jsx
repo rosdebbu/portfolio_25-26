@@ -1,11 +1,11 @@
 import {
+  Github,
   Instagram,
   Linkedin,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitch,
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,12 +33,12 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+          Get In <span className="text-primary">Touch</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          Looking for internships in Software Engineering, Full-Stack, or ML
+          for Summer 2026 and beyond. Open to collaborations and freelance work.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -56,10 +56,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:debjitdas90908@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    debjitt.das@gmail.com
+                    debjitdas90908@gmail.com
                   </a>
                 </div>
               </div>
@@ -70,10 +70,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+919863092282"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    91+ 9863092282
+                    +91 9863092282
                   </a>
                 </div>
               </div>
@@ -84,26 +84,42 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    chennai, India
+                    Chennai, Tamil Nadu, India
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+              <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/debjit-das-6b0452327/" target="_blank">
-                  <Linkedin />
+                <a
+                  href="https://www.linkedin.com/in/debjit-das-6b0452327/"
+                  target="_blank"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Linkedin size={20} />
                 </a>
-                <a href="https://x.com/debbjitttt" target="_blank">
-                  <Twitter />
+                <a
+                  href="https://github.com/rosdebbu"
+                  target="_blank"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Github size={20} />
                 </a>
-                <a href="https://www.instagram.com/thee.devdass_/?utm_source=ig_web_button_share_sheet" target="_blank">
-                  <Instagram />
+                <a
+                  href="https://x.com/debbjitttt"
+                  target="_blank"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Twitter size={20} />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                <a
+                  href="https://www.instagram.com/thee.devdass_/"
+                  target="_blank"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Instagram size={20} />
                 </a>
               </div>
             </div>
@@ -113,7 +129,7 @@ export const ContactSection = () => {
             className="bg-card p-8 rounded-lg shadow-xs"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
             <form className="space-y-6">
               <div>
@@ -122,15 +138,15 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  your namee
+                  Your Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="debjitttt..."
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  placeholder="John Doe"
                 />
               </div>
 
@@ -147,8 +163,8 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="dass@gmail.com"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  placeholder="john@example.com"
                 />
               </div>
 
@@ -164,8 +180,8 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Bringing ideas to life with React, Java, and a passion for learning."
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
+                  placeholder="Tell me about your project or opportunity..."
                 />
               </div>
 

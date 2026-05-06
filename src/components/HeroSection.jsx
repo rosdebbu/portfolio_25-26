@@ -12,7 +12,7 @@ export const HeroSection = () => {
             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
               {" "}
-              Debjittt
+              Debjit
             </span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
               {" "}
@@ -21,12 +21,24 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-              As a 2nd year Data Science student at SRMIST Chennai, I'm architecting my 
-              journey from front-end developer to AI scientist. I engineer compelling web 
-              experiences that serve as both practical applications and stepping stones 
-              toward mastering artificial intelligence, driven by relentless curiosity and 
-              a passion for technological evolution.
+            2nd-year CSE (Data Science) student at SRMIST, Chennai. I build
+            production-grade full-stack applications with real databases, auth
+            systems, and deployment pipelines. Currently researching Graph
+            Neural Networks and prototyping IoT hardware systems — bridging
+            the gap between web engineering and applied AI.
           </p>
+
+          <div className="flex flex-wrap gap-3 justify-center opacity-0 animate-fade-in-delay-4">
+            <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
+              332 GitHub Contributions
+            </span>
+            <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
+              6+ Deployed Projects
+            </span>
+            <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
+              GNN Researcher
+            </span>
+          </div>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
