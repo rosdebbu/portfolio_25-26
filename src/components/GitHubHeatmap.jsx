@@ -1,10 +1,10 @@
-import GitHubCalendar from "react-github-calendar";
+import { GitHubCalendar } from "react-github-calendar";
 
 export const GitHubHeatmap = () => {
   // Use the exact colors from your screenshot
   const explicitTheme = {
-    light: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-    dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+    light: ["rgba(255,255,255,0.05)", "#064e3b", "#047857", "#10b981", "#34d399"],
+    dark: ["rgba(255,255,255,0.05)", "#064e3b", "#047857", "#10b981", "#34d399"],
   };
 
   return (
