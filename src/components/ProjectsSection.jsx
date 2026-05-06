@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Bot, Gem, Globe, Map, Dumbbell } from "lucide-react";
 
 const projects = [
   {
@@ -6,7 +6,9 @@ const projects = [
     title: "OpenZess",
     description:
       "Full-stack autonomous agent platform with React dashboard, FastAPI backend, PostgreSQL (Neon) with connection pooling, WebSocket-based matrix viewer, codebase graph analysis, and automated email reporting. Deployed on Vercel + Render.",
-    image: "/projects/project1.png",
+    icon: Bot,
+    color: "text-blue-400",
+    bgColor: "bg-blue-500/10",
     tags: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Docker", "WebSocket"],
     demoUrl: "https://openzess-docs.vercel.app/",
     githubUrl: "https://github.com/rosdebbu/openzess",
@@ -16,7 +18,9 @@ const projects = [
     title: "IndiGlam",
     description:
       "Production-grade jewellery e-commerce with Google OAuth, Prisma ORM over PostgreSQL, paginated catalog with advanced filters, cart/checkout flow, and responsive dark-gold luxury UI with GSAP animations.",
-    image: "/projects/project2.png",
+    icon: Gem,
+    color: "text-amber-400",
+    bgColor: "bg-amber-500/10",
     tags: ["React 19", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Google OAuth"],
     demoUrl: "#",
     githubUrl: "https://github.com/rosdebbu/IndiGlam",
@@ -26,7 +30,9 @@ const projects = [
     title: "GoAnywhere",
     description:
       "Full-stack hotel booking aggregator with MySQL-backed authentication, multi-step booking flow, admin panel for hotel management, and an AI chatbot that queries the database using natural language.",
-    image: "/projects/project3.png",
+    icon: Globe,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-500/10",
     tags: ["Next.js 14", "TypeScript", "MySQL", "NextAuth", "AI Chatbot"],
     demoUrl: "#",
     githubUrl: "https://github.com/rosdebbu/DBMS-hotel-booking",
@@ -36,7 +42,9 @@ const projects = [
     title: "CampusCompass",
     description:
       "University navigation platform helping students discover campus resources, services, and routes at SRMIST. Built with a modern TypeScript + React stack and deployed on Vercel.",
-    image: "/projects/project3.png",
+    icon: Map,
+    color: "text-purple-400",
+    bgColor: "bg-purple-500/10",
     tags: ["TypeScript", "React", "Vite"],
     demoUrl: "https://capmass2.vercel.app",
     githubUrl: "https://github.com/rosdebbu/campuscompas.",
@@ -46,20 +54,12 @@ const projects = [
     title: "FitPulse",
     description:
       "Mobile-first fitness application with multi-step onboarding flow, daily goal selection, and workout tracking. Designed to feel native on mobile devices with responsive CSS.",
-    image: "/projects/project1.png",
+    icon: Dumbbell,
+    color: "text-rose-400",
+    bgColor: "bg-rose-500/10",
     tags: ["React", "TypeScript", "Vite", "Mobile-First CSS"],
     demoUrl: "#",
     githubUrl: "https://github.com/rosdebbu/FITNESS-APP",
-  },
-  {
-    id: 6,
-    title: "IoT Smart Stick",
-    description:
-      "Portable IoT device using ESP32 microcontroller with environmental sensors to capture real-time coastal metrics. Uses fuzzy logic datasets to predict water quality degradation.",
-    image: "/projects/project2.png",
-    tags: ["ESP32", "C++", "Python", "IoT", "Sensor Fusion"],
-    demoUrl: "#",
-    githubUrl: "#",
   },
 ];
 
@@ -84,12 +84,8 @@ export const ProjectsSection = () => {
               key={key}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+              <div className={`h-48 flex items-center justify-center transition-colors duration-500 ${project.bgColor}`}>
+                <project.icon className={`w-20 h-20 transition-transform duration-500 group-hover:scale-110 ${project.color}`} />
               </div>
 
               <div className="p-6">
