@@ -7,6 +7,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Resume", href: "#resume" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -41,12 +42,17 @@ export const Navbar = () => {
         </a>
 
         {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              className={cn(
+                "transition-colors duration-300",
+                item.name === "Resume"
+                  ? "px-4 py-1.5 border border-primary rounded text-primary hover:bg-primary/10 font-medium"
+                  : "text-foreground/80 hover:text-primary"
+              )}
             >
               {item.name}
             </a>
