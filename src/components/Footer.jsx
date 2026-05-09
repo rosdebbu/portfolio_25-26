@@ -29,7 +29,22 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-card border-t border-border">
+    <footer className="relative bg-card">
+      {/* Wave Divider */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-[99%]">
+        <svg
+          className="relative block w-full h-[60px] md:h-[80px]"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 C150,90 350,0 500,50 C650,100 800,20 1000,60 C1100,80 1150,40 1200,50 L1200,120 L0,120 Z"
+            fill="hsl(222 47% 8%)"
+          />
+        </svg>
+      </div>
+
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-left">
