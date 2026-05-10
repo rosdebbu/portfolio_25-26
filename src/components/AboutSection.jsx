@@ -3,101 +3,122 @@ import { Briefcase, Code, User, Cpu } from "lucide-react";
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
-      {" "}
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary">Me</span>
+        {/* ── Heading ── */}
+        <h2 className="about-heading">
+          LET ME <span className="text-primary">INTRODUCE</span> MYSELF
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Full-Stack Developer & Systems Engineer
-            </h3>
-
-            <p className="text-muted-foreground">
-              I'm a 4th-semester B.Tech CSE (Data Science) student at SRM
-              Institute of Science and Technology (SRMIST), Chennai. Expected
-              graduation: 2028.
+        {/* ── Two-column: Text + Photo ── */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-start mb-16">
+          {/* Left – paragraphs with highlighted keywords */}
+          <div className="about-text-col space-y-6 text-left">
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
+              I'm a Full-Stack Developer from{" "}
+              <span className="about-highlight">Chennai, India</span> who loves
+              transforming ideas into production-grade web applications and
+              intelligent systems.
             </p>
 
-            <p className="text-muted-foreground">
-              My projects ship to production with real databases, authentication,
-              and deployment pipelines — not just localhost demos. I've built
-              e-commerce platforms with Google OAuth and Prisma ORM, autonomous
-              agent dashboards with WebSocket streaming, and hotel booking
-              systems with AI chatbots that query databases using natural
-              language.
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
+              I'm proficient in{" "}
+              <em className="about-highlight">
+                React, Next.js, FastAPI, Node.js, and Python
+              </em>{" "}
+              — and I enjoy working across both frontend and backend stacks with
+              real databases and deployment pipelines.
             </p>
 
-            <p className="text-muted-foreground">
-              Beyond web development, I'm actively collaborating with university
-              faculty on Graph Neural Network research and engineering IoT
-              devices with ESP32 microcontrollers for environmental monitoring.
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
+              My key areas of interest include developing{" "}
+              <em className="about-highlight">
+                Full-Stack Web Applications, AI-Powered Systems
+              </em>
+              , and creating aesthetically refined, user-centric digital
+              experiences with strong architecture and clean code.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                {" "}
-                Get In Touch
-              </a>
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
+              Beyond the web, I'm actively researching{" "}
+              <span className="about-highlight">Graph Neural Networks</span>{" "}
+              with university faculty and prototyping IoT devices with{" "}
+              <em className="about-highlight">ESP32</em> microcontrollers —
+              bridging software and hardware.
+            </p>
+          </div>
 
-              <a
-                href="https://github.com/rosdebbu"
-                target="_blank"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                View GitHub
-              </a>
+          {/* Right – circular profile photo */}
+          <div className="about-photo-wrapper">
+            <div className="about-photo-ring">
+              <img
+                src="/profile-photo.jpg"
+                alt="Debjit Das"
+                className="about-photo"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* ── Expertise Cards ── */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="about-card group">
+            <div className="about-card-icon">
+              <Code className="h-6 w-6 text-primary" />
+            </div>
+            <div className="text-left">
+              <h4 className="font-semibold text-lg text-foreground mb-1">
+                Full-Stack Development
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                React 19, Next.js 14, FastAPI, Node.js with PostgreSQL, MySQL,
+                and Prisma ORM. Deployed on Vercel + Render.
+              </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Full-Stack Development</h4>
-                  <p className="text-muted-foreground">
-                    React 19, Next.js 14, FastAPI, Node.js with PostgreSQL,
-                    MySQL, and Prisma ORM. Deployed on Vercel + Render.
-                  </p>
-                </div>
-              </div>
+          <div className="about-card group">
+            <div className="about-card-icon">
+              <User className="h-6 w-6 text-primary" />
             </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">AI & Research</h4>
-                  <p className="text-muted-foreground">
-                    Graph Neural Networks research with PyTorch/PyG. NLP
-                    chatbots, codebase knowledge graphs, and fuzzy logic
-                    data processing.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Cpu className="h-6 w-6 text-primary" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Hardware & Systems</h4>
-                  <p className="text-muted-foreground">
-                    ESP32 IoT prototyping, OpenFOAM CFD simulations, Docker
-                    containerization, and WSL2/Linux environments.
-                  </p>
-                </div>
-              </div>
+            <div className="text-left">
+              <h4 className="font-semibold text-lg text-foreground mb-1">
+                AI &amp; Research
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Graph Neural Networks with PyTorch/PyG. NLP chatbots, codebase
+                knowledge graphs, and fuzzy logic data pipelines.
+              </p>
             </div>
           </div>
+
+          <div className="about-card group">
+            <div className="about-card-icon">
+              <Cpu className="h-6 w-6 text-primary" />
+            </div>
+            <div className="text-left">
+              <h4 className="font-semibold text-lg text-foreground mb-1">
+                Hardware &amp; Systems
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                ESP32 IoT prototyping, OpenFOAM CFD, Docker containerization,
+                and WSL2/Linux environments.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ── CTA Buttons ── */}
+        <div className="flex flex-col sm:flex-row gap-4 pt-10 justify-center">
+          <a href="#contact" className="cosmic-button">
+            Get In Touch
+          </a>
+          <a
+            href="https://github.com/rosdebbu"
+            target="_blank"
+            className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+          >
+            View GitHub
+          </a>
         </div>
       </div>
     </section>

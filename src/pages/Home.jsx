@@ -7,6 +7,7 @@ import { GitHubHeatmap } from "../components/GitHubHeatmap";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { ResumeSection } from "../components/ResumeSection";
+import { BlogSection } from "../components/BlogSection";
 import { Footer } from "../components/Footer";
 
 export const Home = () => {
@@ -25,6 +26,7 @@ export const Home = () => {
         <GitHubHeatmap />
         <ProjectsSection />
         <ResumeSection />
+        <BlogSection />
         <ContactSection />
       </main>
 

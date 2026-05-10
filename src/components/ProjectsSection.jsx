@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github, Bot, Gem, Globe, Map, Dumbbell } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Bot, Gem, TrendingUp, Map, Dumbbell } from "lucide-react";
 
 const projects = [
   {
@@ -27,15 +27,15 @@ const projects = [
   },
   {
     id: 3,
-    title: "GoAnywhere",
+    title: "InvestTrack",
     description:
-      "Full-stack hotel booking aggregator with MySQL-backed authentication, multi-step booking flow, admin panel for hotel management, and an AI chatbot that queries the database using natural language.",
-    icon: Globe,
+      "Comprehensive personal finance & wealth management platform with portfolio tracking, market analysis, goal planning, AI-powered advisor using Google Gemini, and multi-asset tracking with sector heatmaps.",
+    icon: TrendingUp,
     color: "text-emerald-400",
     bgColor: "bg-emerald-500/10",
-    tags: ["Next.js 14", "TypeScript", "MySQL", "NextAuth", "AI Chatbot"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/rosdebbu/DBMS-hotel-booking",
+    tags: ["React 18", "TypeScript", "Tailwind CSS", "Google Gemini AI", "Vite"],
+    demoUrl: "https://inversttrack.vercel.app",
+    githubUrl: "https://github.com/rosdebbu/inversttrack",
   },
   {
     id: 4,
