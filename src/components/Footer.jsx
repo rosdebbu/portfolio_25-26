@@ -196,11 +196,11 @@ export const Footer = () => {
                 ))}
               </div>
               <a
-                href="mailto:debjitdas@example.com"
+                href="mailto:itsdebjit1986@gmail.com"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group"
               >
                 <Mail className="h-4 w-4 group-hover:drop-shadow-[0_0_6px_rgba(139,92,246,0.6)]" />
-                debjitdas@example.com
+                itsdebjit1986@gmail.com
                 <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             </div>

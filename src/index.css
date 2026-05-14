@@ -101,6 +101,27 @@
   }
 }
 
+/* ── Section View (tab-switch layout) ────────── */
+.section-view {
+  min-height: calc(100vh - 64px);
+  padding-top: 64px; /* space for fixed navbar */
+}
+
+.section-animate {
+  animation: sectionFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;

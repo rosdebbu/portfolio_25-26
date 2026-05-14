@@ -1,12 +1,13 @@
 import { Briefcase, Code, User, Cpu } from "lucide-react";
+import { GitHubHeatmap } from "./GitHubHeatmap";
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         {/* ── Heading ── */}
-        <h2 className="about-heading">
-          LET ME <span className="text-primary">INTRODUCE</span> MYSELF
+        <h2 className="about-heading text-center md:text-left">
+          Know Who <span className="text-primary">I'M</span>
         </h2>
 
         {/* ── Two-column: Text + Photo ── */}
@@ -14,46 +15,46 @@ export const AboutSection = () => {
           {/* Left – paragraphs with highlighted keywords */}
           <div className="about-text-col space-y-6 text-left">
             <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
-              I'm a Full-Stack Developer from{" "}
-              <span className="about-highlight">Chennai, India</span> who loves
-              transforming ideas into production-grade web applications and
-              intelligent systems.
+              Hi everyone! I'm <span className="about-highlight">Ross</span>, originally from Agartala and currently based in <span className="about-highlight">Chennai, India</span>.
             </p>
 
             <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
-              I'm proficient in{" "}
-              <em className="about-highlight">
-                React, Next.js, FastAPI, Node.js, and Python
-              </em>{" "}
-              — and I enjoy working across both frontend and backend stacks with
-              real databases and deployment pipelines.
+              I'm an AI Developer and aspiring researcher specializing in <em className="about-highlight">Large Language Models (LLMs), RAG, and Graph Neural Networks (GNNs)</em>.<br />
+              I am currently pursuing a B.Tech in <span className="about-highlight">Computer Science and Engineering (Data Science)</span> at the <span className="about-highlight">SRMIST</span>.
             </p>
 
             <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
-              My key areas of interest include developing{" "}
-              <em className="about-highlight">
-                Full-Stack Web Applications, AI-Powered Systems
-              </em>
-              , and creating aesthetically refined, user-centric digital
-              experiences with strong architecture and clean code.
+              Outside of training models and deploying apps, I spend my time on activities that keep me analytical and engaged:
             </p>
 
-            <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
-              Beyond the web, I'm actively researching{" "}
-              <span className="about-highlight">Graph Neural Networks</span>{" "}
-              with university faculty and prototyping IoT devices with{" "}
-              <em className="about-highlight">ESP32</em> microcontrollers —
-              bridging software and hardware.
-            </p>
+            <ul className="space-y-3 mt-4 ml-4">
+              <li className="flex gap-3 items-center text-foreground/80 text-base md:text-lg">
+                <span className="text-xl">⌨️</span> Customizing mechanical keyboards and researching hardware
+              </li>
+              <li className="flex gap-3 items-center text-foreground/80 text-base md:text-lg">
+                <span className="text-xl">🔭</span> Exploring astrology and birth chart analysis
+              </li>
+              <li className="flex gap-3 items-center text-foreground/80 text-base md:text-lg">
+                <span className="text-xl">💻</span> Building open-source projects like CampusCompass and IndiGlam
+              </li>
+            </ul>
+
+            <div className="pt-6 text-center">
+              <p className="text-primary text-base md:text-lg mb-2 tracking-wide font-medium">
+                "Always open to research collaborations and development projects. Feel free to contact me!"
+              </p>
+              <p className="text-muted-foreground">— DEBJIT DAS</p>
+            </div>
           </div>
 
-          {/* Right – circular profile photo */}
-          <div className="about-photo-wrapper">
-            <div className="about-photo-ring">
+          {/* Right – coding illustration */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative w-72 h-72 md:w-[380px] md:h-[380px]">
+              <div className="absolute inset-0 rounded-2xl bg-primary/5 border border-primary/10 backdrop-blur-sm" />
               <img
-                src="/profile-photo.jpg"
-                alt="Debjit Das"
-                className="about-photo"
+                src="/coding-illustration.png"
+                alt="Developer Illustration"
+                className="relative z-10 w-full h-full object-contain p-4 drop-shadow-2xl"
               />
             </div>
           </div>
@@ -105,6 +106,11 @@ export const AboutSection = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* ── GitHub Heatmap ── */}
+        <div className="mt-16">
+          <GitHubHeatmap />
         </div>
 
         {/* ── CTA Buttons ── */}
