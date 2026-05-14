@@ -33,7 +33,7 @@ const featuredProjects = [
   },
 ];
 
-export const HeroSection = () => {
+export const HeroSection = ({ onNavClick }) => {
   return (
     <section
       id="hero"
@@ -240,6 +240,19 @@ export const HeroSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* View All Projects Button */}
+          <div className="mt-12 flex justify-center">
+            <button
+              onClick={() => onNavClick("projects")}
+              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 font-medium tracking-wide shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]"
+            >
+              View All Projects 
+              <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
+            </button>
           </div>
         </div>
 

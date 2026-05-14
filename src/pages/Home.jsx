@@ -41,7 +41,7 @@ export const Home = () => {
       {/* Main Content — only the active section is shown */}
       <main className="section-view">
         <div key={activeSection} className="section-animate">
-          <ActiveComponent />
+          <ActiveComponent onNavClick={handleNavClick} />
         </div>
       </main>
 
