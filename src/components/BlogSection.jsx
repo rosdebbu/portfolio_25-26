@@ -5,7 +5,7 @@ const blogPosts = [
   {
     id: 1,
     title: "My Coding Journey",
-    image: "/blog/coding-journey.png",
+    image: "/blog/my-coding-journey.jpg",
     date: "April 2025",
     readTime: "4 min read",
     excerpt:
@@ -19,64 +19,6 @@ The journey hasn't been easy. There were times when I questioned everything, sta
 Today, I build production-grade applications with authentication, payment systems, and deployment pipelines. My stack includes React 19, Next.js 14, FastAPI, PostgreSQL, and Prisma ORM. Every project teaches me something new, and that's what keeps me going.
 
 The best part? I'm just getting started.`,
-  },
-  {
-    id: 2,
-    title: "Campus Life",
-    image: "/blog/campus-life.png",
-    date: "March 2025",
-    readTime: "3 min read",
-    excerpt:
-      "A time worth remembering — reflections on college life at SRMIST, hackathons, friendships, and growing as a developer.",
-    content: `Joining SRM Institute of Science and Technology was a turning point. Chennai's energy, the campus culture, and the incredible people I've met — it all shaped who I am today.
-
-Between lectures on data structures and late-night study sessions, I found my tribe — fellow developers who shared the same passion for building things. We'd hack together on weekends, participate in coding competitions, and push each other to be better.
-
-The campus gave me more than just a degree path. It gave me exposure to research, faculty collaborations on Graph Neural Networks, and the confidence to present my work. The hackathons taught me to think fast, prototype quickly, and ship under pressure.
-
-Some of my best memories are from the computer lab at 2 AM, surrounded by empty coffee cups and half-finished code, working on projects that felt impossible until they suddenly worked.
-
-College isn't just about grades — it's about the experiences that shape your thinking and the people who believe in you.`,
-  },
-  {
-    id: 3,
-    title: "Hardware & IoT",
-    image: "/blog/hardware-tinkering.png",
-    date: "February 2025",
-    readTime: "5 min read",
-    excerpt:
-      "Beyond software — my experiments with ESP32 microcontrollers, sensor arrays, and building real-world IoT systems.",
-    content: `Most people know me as a web developer, but there's another side to my work that I'm equally passionate about — hardware and IoT.
-
-It started when I got my first ESP32 microcontroller. The idea of writing code that controls physical devices in the real world fascinated me. No browser, no DOM — just raw signals, sensors, and actuators.
-
-I've built environmental monitoring systems that stream real-time data from temperature, humidity, and air quality sensors to cloud dashboards. The stack is surprisingly web-adjacent: the ESP32 sends data via MQTT, a Node.js backend processes it, and a React dashboard visualizes everything.
-
-The biggest challenge in IoT isn't the code — it's the debugging. When something doesn't work, it could be a hardware issue, a wiring problem, a firmware bug, or a network configuration error. You learn patience quickly.
-
-What I love most about hardware projects is the tangible feedback. When an LED blinks because of code you wrote, or a motor spins on command, it feels different from rendering a div on screen. It's real, it's physical, and it's incredibly satisfying.
-
-Next on my list: building a smart home system powered by AI that learns from usage patterns.`,
-  },
-  {
-    id: 4,
-    title: "AI Research",
-    image: "/blog/ai-research.png",
-    date: "January 2025",
-    readTime: "6 min read",
-    excerpt:
-      "Diving into Graph Neural Networks — my research journey into AI, PyTorch, and the intersection of web and intelligence.",
-    content: `Artificial Intelligence isn't just a buzzword for me — it's a field I'm actively researching alongside university faculty.
-
-My current focus is on Graph Neural Networks (GNNs) using PyTorch and PyG (PyTorch Geometric). GNNs are fascinating because they can learn from data that has relational structure — social networks, molecular structures, knowledge graphs, and more.
-
-The research started when I built a codebase knowledge graph for one of my projects. I realized that understanding relationships between code modules, functions, and data flows could be represented as a graph problem. That insight led me to GNNs.
-
-Working with faculty has been an incredible learning experience. The academic rigor — reading papers, understanding mathematical foundations, running experiments, and documenting results — is very different from the "ship fast" mentality of web development. Both are valuable.
-
-I've also built NLP chatbots that use fuzzy logic for data processing and natural language database queries. Combining AI with web interfaces creates powerful tools that feel like magic to end users.
-
-The intersection of web engineering and AI is where I see the future. Web developers who understand ML, and ML engineers who can build production UIs — that's the sweet spot I'm aiming for.`,
   },
 ];
 
