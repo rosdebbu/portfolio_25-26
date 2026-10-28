@@ -1,10 +1,36 @@
-import { Briefcase, Code, User, Cpu, ExternalLink, Github, Bot, Gem, TrendingUp, Linkedin, Instagram, Twitter } from "lucide-react";
+import { Briefcase, Code, User, Cpu, ExternalLink, Github, Bot, Gem, TrendingUp, Linkedin, Instagram, Twitter, Sprout, ShieldCheck } from "lucide-react";
 
 const featuredProjects = [
   {
-    title: "OpenZess",
+    title: "KisanZess",
+    badge: "AgTech AI",
+    image: "/projects/kisanzess.jpg",
     description:
-      "Full-stack autonomous agent platform with React dashboard, FastAPI backend, PostgreSQL with connection pooling, WebSocket-based matrix viewer, and automated email reporting.",
+      "Dual-brain reflex agent system for Indian agriculture. 4-agent Krishi Panchayat debate arena, sub-35ms ModernBERT router, and Gemini 1.5 Flash leaf vision.",
+    icon: Sprout,
+    color: "text-lime-400",
+    bgColor: "bg-lime-500/10",
+    demoUrl: "https://github.com/rosdebbu/KisanZess",
+    githubUrl: "https://github.com/rosdebbu/KisanZess",
+  },
+  {
+    title: "SatyaPay",
+    badge: "Fintech Interceptor",
+    image: "/projects/satyapay.jpg",
+    description:
+      "Pre-commitment financial transparency interceptor for POS/banking. Deterministic true APR, hidden GST drag, exit lock-in, and sandboxed on-device IndexedDB.",
+    icon: ShieldCheck,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-500/10",
+    demoUrl: "https://github.com/rosdebbu/SatyaPay",
+    githubUrl: "https://github.com/rosdebbu/SatyaPay",
+  },
+  {
+    title: "OpenZess",
+    badge: "Autonomous Robotics",
+    image: "/projects/openzess.jpg",
+    description:
+      "Full-stack autonomous agent platform with React dashboard, FastAPI backend, PostgreSQL Neon pooling, WebSocket matrix viewer, and automated email reporting.",
     icon: Bot,
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
@@ -13,23 +39,15 @@ const featuredProjects = [
   },
   {
     title: "IndiGlam",
+    badge: "E-Commerce",
+    image: "/projects/indiglam.svg",
     description:
-      "Production-grade jewellery e-commerce with Google OAuth, Prisma ORM over PostgreSQL, paginated catalog with advanced filters, and responsive dark-gold luxury UI.",
+      "Production-grade jewellery e-commerce with Google OAuth, Prisma ORM over PostgreSQL, paginated catalog with filters, and responsive dark-gold luxury UI.",
     icon: Gem,
     color: "text-amber-400",
     bgColor: "bg-amber-500/10",
-    demoUrl: "#",
+    demoUrl: "https://github.com/rosdebbu/IndiGlam",
     githubUrl: "https://github.com/rosdebbu/IndiGlam",
-  },
-  {
-    title: "InvestTrack",
-    description:
-      "Personal finance & wealth management platform with portfolio tracking, market analysis, AI-powered advisor using Google Gemini, and multi-asset tracking with sector heatmaps.",
-    icon: TrendingUp,
-    color: "text-emerald-400",
-    bgColor: "bg-emerald-500/10",
-    demoUrl: "https://inversttrack.vercel.app",
-    githubUrl: "https://github.com/rosdebbu/inversttrack",
   },
 ];
 
@@ -65,13 +83,16 @@ export const HeroSection = ({ onNavClick }) => {
 
             <div className="flex flex-wrap gap-3 opacity-0 animate-fade-in-delay-4">
               <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
-                332 GitHub Contributions
+                350+ GitHub Contributions
               </span>
               <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
-                6+ Deployed Projects
+                8+ Production Projects
               </span>
               <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
-                GNN Researcher
+                GNN Researcher @ SRMIST
+              </span>
+              <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
+                Multi-Agent &amp; Edge AI
               </span>
             </div>
           </div>
@@ -198,25 +219,38 @@ export const HeroSection = ({ onNavClick }) => {
             A few highlights from my recent work.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProjects.map((project) => (
               <div
                 key={project.title}
-                className="group rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+                className="group flex flex-col justify-between rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
               >
-                {/* Icon header */}
-                <div className={`h-36 ${project.bgColor} flex items-center justify-center`}>
-                  <project.icon className={`h-16 w-16 ${project.color}`} />
+                {/* Screenshot Preview */}
+                <div className="relative h-44 overflow-hidden border-b border-border/40 bg-muted/20">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-300" />
+                  {project.badge && (
+                    <span className="absolute top-3 right-3 text-[10px] font-semibold px-2.5 py-1 rounded-full bg-background/90 text-primary border border-primary/30 backdrop-blur-md shadow-xs">
+                      {project.badge}
+                    </span>
+                  )}
                 </div>
 
                 {/* Content */}
-                <div className="p-5 text-center">
-                  <h3 className="text-lg font-bold text-foreground mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {project.description}
-                  </p>
+                <div className="p-5 flex flex-col flex-1 justify-between text-center">
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+                  </div>
 
                   {/* Buttons */}
                   <div className="flex gap-3 justify-center">

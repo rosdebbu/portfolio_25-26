@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="invBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051319" />
+      <stop offset="50%" stop-color="#08202c" />
+      <stop offset="100%" stop-color="#040e14" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(34, 211, 238, 0.4)" />
+      <stop offset="100%" stop-color="rgba(34, 211, 238, 0.0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#invBg)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="1280" height="68" fill="#081e28" opacity="0.9" />
+  <line x1="0" y1="68" x2="1280" y2="68" stroke="#0e3a4e" stroke-width="1" />
+
+  <g transform="translate(60, 20)">
+    <circle cx="16" cy="14" r="14" fill="url(#cyanGrad)" />
+    <path d="M10,18 L15,11 L18,14 L23,8" fill="none" stroke="#051319" stroke-width="2.5" stroke-linecap="round" />
+    <text x="40" y="21" fill="#f0fdfa" font-family="system-ui, sans-serif" font-weight="800" font-size="20">InvestTrack</text>
+    <text x="160" y="21" fill="#22d3ee" font-family="system-ui, sans-serif" font-weight="500" font-size="12">AI WEALTH PLATFORM</text>
+  </g>
+
+  <!-- Nav links -->
+  <g font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#94a3b8">
+    <text x="420" y="40" fill="#22d3ee">Portfolio</text>
+    <text x="520" y="40">Market Heatmap</text>
+    <text x="660" y="40">Gemini AI Advisor</text>
+    <text x="800" y="40">Retirement Goals</text>
+  </g>
+
+  <!-- Market Mood Pill -->
+  <g transform="translate(1040, 18)">
+    <rect width="180" height="32" rx="16" fill="rgba(52, 211, 153, 0.12)" stroke="#34d399" stroke-opacity="0.3" />
+    <circle cx="16" cy="16" r="5" fill="#34d399" />
+    <text x="30" y="21" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Market Mood: Greed (68)</text>
+  </g>
+
+  <!-- Left Column: Metrics & Chart -->
+  <g transform="translate(60, 95)">
+    <!-- KPI Row -->
+    <g>
+      <rect width="720" height="100" rx="14" fill="#08222f" stroke="#0e435a" stroke-width="1" />
+      
+      <g transform="translate(30, 24)">
+        <text x="0" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Total Net Worth</text>
+        <text x="0" y="48" fill="#f0fdfa" font-family="system-ui, sans-serif" font-weight="800" font-size="28">₹24,85,420</text>
+        <rect x="180" y="28" width="85" height="22" rx="11" fill="rgba(52, 211, 153, 0.15)" />
+        <text x="190" y="43" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">+18.4% YoY</text>
+      </g>
+
+      <line x1="330" y1="20" x2="330" y2="80" stroke="#0e435a" stroke-width="1" />
+
+      <g transform="translate(360, 24)">
+        <text x="0" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Unrealized Gains</text>
+        <text x="0" y="48" fill="#34d399" font-family="system-ui, sans-serif" font-weight="800" font-size="28">+₹4,22,600</text>
+      </g>
+
+      <line x1="535" y1="20" x2="535" y2="80" stroke="#0e435a" stroke-width="1" />
+
+      <g transform="translate(560, 24)">
+        <text x="0" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Risk Index</text>
+        <text x="0" y="48" fill="#22d3ee" font-family="system-ui, sans-serif" font-weight="800" font-size="26">Moderate</text>
+      </g>
+    </g>
+
+    <!-- Main Performance Chart -->
+    <g transform="translate(0, 120)">
+      <rect width="720" height="460" rx="14" fill="#08222f" stroke="#0e435a" stroke-width="1" />
+      <text x="30" y="38" fill="#f0fdfa" font-family="system-ui, sans-serif" font-weight="700" font-size="16">Portfolio Growth Telemetry</text>
+      <text x="30" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Multi-asset real-time returns (Equities, Mutual Funds, Digital Gold)</text>
+
+      <!-- Chart area -->
+      <g transform="translate(30, 90)">
+        <!-- Grid lines -->
+        <line x1="0" y1="0" x2="660" y2="0" stroke="#0e435a" stroke-dasharray="4 4" />
+        <line x1="0" y1="75" x2="660" y2="75" stroke="#0e435a" stroke-dasharray="4 4" />
+        <line x1="0" y1="150" x2="660" y2="150" stroke="#0e435a" stroke-dasharray="4 4" />
+        <line x1="0" y1="225" x2="660" y2="225" stroke="#0e435a" stroke-dasharray="4 4" />
+        <line x1="0" y1="300" x2="660" y2="300" stroke="#0e435a" />
+
+        <!-- Area curve -->
+        <path d="M0,260 Q90,230 180,200 T360,140 T540,80 T660,40 L660,300 L0,300 Z" fill="url(#chartFill)" />
+        <path d="M0,260 Q90,230 180,200 T360,140 T540,80 T660,40" fill="none" stroke="#22d3ee" stroke-width="3.5" />
+        <circle cx="660" cy="40" r="6" fill="#34d399" stroke="#f0fdfa" stroke-width="2" />
+        <circle cx="360" cy="140" r="4" fill="#22d3ee" />
+        <circle cx="180" cy="200" r="4" fill="#22d3ee" />
+
+        <!-- Labels -->
+        <g fill="#64748b" font-family="system-ui, sans-serif" font-size="11" transform="translate(0, 325)">
+          <text x="0" y="0">Jan</text>
+          <text x="130" y="0">Apr</text>
+          <text x="260" y="0">Jul</text>
+          <text x="390" y="0">Oct</text>
+          <text x="520" y="0">Jan</text>
+          <text x="640" y="0">Now</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Column: Gemini AI Advisor + Asset Alloc -->
+  <g transform="translate(805, 95)">
+    <!-- Gemini AI Card -->
+    <rect width="415" height="340" rx="14" fill="#08222f" stroke="rgba(34, 211, 238, 0.3)" stroke-width="1.5" />
+    <g transform="translate(24, 28)">
+      <circle cx="16" cy="16" r="16" fill="url(#cyanGrad)" />
+      <text x="44" y="16" fill="#f0fdfa" font-family="system-ui, sans-serif" font-weight="700" font-size="15">Gemini AI Wealth Advisor</text>
+      <text x="44" y="32" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="11">Google Gemini 1.5 Integration</text>
+
+      <rect x="0" y="55" width="365" height="120" rx="10" fill="#051722" stroke="#0e435a" />
+      <text x="16" y="80" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Rebalancing Strategy Insight:</text>
+      <text x="16" y="104" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11.5" width="330">
+        "Your equity allocation is 58%. With rising interest rates,
+      </text>
+      <text x="16" y="124" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11.5">
+        consider trimming 6% large-cap tech to deploy into high-yield
+      </text>
+      <text x="16" y="144" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11.5">
+        liquid debt funds to lock in 7.4% risk-free return."
+      </text>
+
+      <rect x="0" y="195" width="175" height="36" rx="8" fill="url(#cyanGrad)" />
+      <text x="36" y="218" fill="#051319" font-family="system-ui, sans-serif" font-weight="700" font-size="12">Execute Rebalance</text>
+
+      <rect x="190" y="195" width="175" height="36" rx="8" fill="transparent" stroke="#22d3ee" stroke-width="1" />
+      <text x="232" y="218" fill="#22d3ee" font-family="system-ui, sans-serif" font-weight="600" font-size="12">Ask Gemini AI</text>
+    </g>
+
+    <!-- Asset Allocation Breakdown -->
+    <g transform="translate(0, 360)">
+      <rect width="415" height="220" rx="14" fill="#08222f" stroke="#0e435a" stroke-width="1" />
+      <g transform="translate(24, 25)">
+        <text x="0" y="14" fill="#f0fdfa" font-family="system-ui, sans-serif" font-weight="700" font-size="15">Asset Allocation</text>
+        
+        <!-- Bars -->
+        <g transform="translate(0, 35)">
+          <text x="0" y="12" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Equities (Large &amp; Mid Cap)</text>
+          <text x="365" y="12" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">58%</text>
+          <rect x="0" y="20" width="365" height="8" rx="4" fill="#051722" />
+          <rect x="0" y="20" width="211" height="8" rx="4" fill="url(#cyanGrad)" />
+
+          <text x="0" y="52" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Debt &amp; Fixed Income</text>
+          <text x="365" y="52" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">22%</text>
+          <rect x="0" y="60" width="365" height="8" rx="4" fill="#051722" />
+          <rect x="0" y="60" width="80" height="8" rx="4" fill="url(#emeraldGrad)" />
+
+          <text x="0" y="92" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Digital Gold &amp; Silver</text>
+          <text x="365" y="92" fill="#eab308" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">12%</text>
+          <rect x="0" y="100" width="365" height="8" rx="4" fill="#051722" />
+          <rect x="0" y="100" width="43" height="8" rx="4" fill="#eab308" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

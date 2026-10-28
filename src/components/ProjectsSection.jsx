@@ -1,56 +1,115 @@
 import { useState } from "react";
-import { ArrowRight, ExternalLink, Github, Bot, Gem, TrendingUp, Map, Dumbbell } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Bot, Gem, TrendingUp, Map, Dumbbell, Sprout, ShieldCheck, Radio, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const projects = [
   {
     id: 1,
-    title: "OpenZess",
+    title: "KisanZess",
+    badge: "Google Cloud Hackathon 2026",
+    image: "/projects/kisanzess.jpg",
     description:
-      "Full-stack autonomous agent platform with React dashboard, FastAPI backend, PostgreSQL (Neon) with connection pooling, WebSocket-based matrix viewer, codebase graph analysis, and automated email reporting. Deployed on Vercel + Render.",
+      "Dual-brain reflex agent system for Indian agriculture. Features a 4-agent Krishi Panchayat consensus debate arena (Pathologist, Economist, Ecologist, Sarpanch), sub-35ms ModernBERT reflex router, Scikit-Learn crop & fertilizer ML models, Google Gemini 1.5 Flash leaf vision diagnosis, and real-time APMC Mandi price intelligence.",
+    icon: Sprout,
+    color: "text-lime-400",
+    bgColor: "bg-lime-500/10",
+    borderColor: "border-lime-500/20 group-hover:border-lime-500/50",
+    shadowColor: "hover:shadow-lime-500/20",
+    tags: ["Python", "FastAPI", "ModernBERT", "Scikit-Learn", "Gemini 1.5 Flash", "Multi-Agent", "WebSockets"],
+    category: "AI & Full-Stack",
+    demoUrl: "https://github.com/rosdebbu/KisanZess",
+    githubUrl: "https://github.com/rosdebbu/KisanZess",
+  },
+  {
+    id: 2,
+    title: "SatyaPay (CommitGuard)",
+    badge: "Fintech Hackathon Finalist",
+    image: "/projects/satyapay.jpg",
+    description:
+      "Pre-commitment financial transparency interceptor for POS & banking that catches cognitive lock-in in under 3 seconds. Features deterministic calculation of true effective APR, hidden GST drag, exit penalty modeling, and 100% on-device sandboxed IndexedDB storage with zero central telemetry.",
+    icon: ShieldCheck,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-500/10",
+    borderColor: "border-emerald-500/20 group-hover:border-emerald-500/50",
+    shadowColor: "hover:shadow-emerald-500/20",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "IndexedDB", "Chrome Extension", "Financial Engine"],
+    category: "AI & Full-Stack",
+    demoUrl: "https://github.com/rosdebbu/SatyaPay",
+    githubUrl: "https://github.com/rosdebbu/SatyaPay",
+  },
+  {
+    id: 3,
+    title: "OpenZess",
+    badge: "Flagship Robotics & Agents",
+    image: "/projects/openzess.jpg",
+    description:
+      "Full-stack autonomous agent platform with React dashboard, FastAPI backend, PostgreSQL (Neon) with connection pooling, WebSocket-based matrix viewer, Graphify codebase AST knowledge graph analysis, and automated email reporting. Deployed on Vercel + Render.",
     icon: Bot,
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20 group-hover:border-blue-500/50",
     shadowColor: "hover:shadow-blue-500/20",
-    tags: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Docker", "WebSocket"],
+    tags: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Docker", "WebSocket", "Graphify"],
     category: "AI & Full-Stack",
     demoUrl: "https://openzess-docs.vercel.app/",
     githubUrl: "https://github.com/rosdebbu/openzess",
   },
   {
-    id: 2,
+    id: 4,
     title: "IndiGlam",
+    badge: "Production E-Commerce",
+    image: "/projects/indiglam.svg",
     description:
-      "Production-grade jewellery e-commerce with Google OAuth, Prisma ORM over PostgreSQL, paginated catalog with advanced filters, cart/checkout flow, and responsive dark-gold luxury UI with GSAP animations.",
+      "Production-grade luxury jewellery e-commerce platform with Google OAuth, Prisma ORM over PostgreSQL, paginated catalog with advanced filters, cart/checkout flow, and responsive dark-gold luxury UI with GSAP animations.",
     icon: Gem,
     color: "text-amber-400",
     bgColor: "bg-amber-500/10",
     borderColor: "border-amber-500/20 group-hover:border-amber-500/50",
     shadowColor: "hover:shadow-amber-500/20",
-    tags: ["React 19", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Google OAuth"],
+    tags: ["React 19", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Google OAuth", "GSAP"],
     category: "Full-Stack",
-    demoUrl: "#",
+    demoUrl: "https://github.com/rosdebbu/IndiGlam",
     githubUrl: "https://github.com/rosdebbu/IndiGlam",
   },
   {
-    id: 3,
+    id: 5,
     title: "InvestTrack",
+    badge: "AI Wealth Advisor",
+    image: "/projects/investtrack.svg",
     description:
-      "Comprehensive personal finance & wealth management platform with portfolio tracking, market analysis, goal planning, AI-powered advisor using Google Gemini, and multi-asset tracking with sector heatmaps.",
+      "Comprehensive personal finance & wealth management platform with multi-asset portfolio tracking, sector heatmaps, market sentiment index, and an AI-powered financial advisor driven by Google Gemini API.",
     icon: TrendingUp,
-    color: "text-emerald-400",
-    bgColor: "bg-emerald-500/10",
-    borderColor: "border-emerald-500/20 group-hover:border-emerald-500/50",
-    shadowColor: "hover:shadow-emerald-500/20",
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-500/10",
+    borderColor: "border-cyan-500/20 group-hover:border-cyan-500/50",
+    shadowColor: "hover:shadow-cyan-500/20",
     tags: ["React 18", "TypeScript", "Tailwind CSS", "Google Gemini AI", "Vite"],
     category: "AI & Full-Stack",
     demoUrl: "https://inversttrack.vercel.app",
     githubUrl: "https://github.com/rosdebbu/inversttrack",
   },
   {
-    id: 4,
+    id: 6,
+    title: "IoT Environmental Smart Stick",
+    badge: "Hardware & Edge AI",
+    image: "/projects/iot-smartstick.svg",
+    description:
+      "Portable IoT hardware telemetry device engineered with ESP32 and environmental sensor fusion for real-time coastal metrics capture. Feeds sensor data into fuzzy logic models to forecast water quality degradation and environmental anomalies.",
+    icon: Radio,
+    color: "text-violet-400",
+    bgColor: "bg-violet-500/10",
+    borderColor: "border-violet-500/20 group-hover:border-violet-500/50",
+    shadowColor: "hover:shadow-violet-500/20",
+    tags: ["ESP32", "C++", "Python", "Fuzzy Logic", "Sensor Fusion", "IoT"],
+    category: "Hardware & IoT",
+    demoUrl: "https://github.com/rosdebbu",
+    githubUrl: "https://github.com/rosdebbu",
+  },
+  {
+    id: 7,
     title: "CampusCompass",
+    badge: "University Navigation",
+    image: "/projects/campuscompass.png",
     description:
       "University navigation platform helping students discover campus resources, services, and routes at SRMIST. Built with a modern TypeScript + React stack and deployed on Vercel.",
     icon: Map,
@@ -64,8 +123,10 @@ const projects = [
     githubUrl: "https://github.com/rosdebbu/campuscompas.",
   },
   {
-    id: 5,
+    id: 8,
     title: "FitPulse",
+    badge: "Mobile Fitness",
+    image: "/projects/fitpulse.svg",
     description:
       "Mobile-first fitness application with multi-step onboarding flow, daily goal selection, and workout tracking. Designed to feel native on mobile devices with responsive CSS.",
     icon: Dumbbell,
@@ -75,12 +136,12 @@ const projects = [
     shadowColor: "hover:shadow-rose-500/20",
     tags: ["React", "TypeScript", "Vite", "Mobile-First CSS"],
     category: "Frontend",
-    demoUrl: "#",
+    demoUrl: "https://github.com/rosdebbu/FITNESS-APP",
     githubUrl: "https://github.com/rosdebbu/FITNESS-APP",
   },
 ];
 
-const categories = ["All", "AI & Full-Stack", "Full-Stack", "Frontend"];
+const categories = ["All", "AI & Full-Stack", "Full-Stack", "Hardware & IoT", "Frontend"];
 
 export const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -132,20 +193,36 @@ export const ProjectsSection = () => {
                 project.shadowColor
               )}
             >
-              {/* Icon Container (Left side on desktop, top on mobile) */}
-              <div className={`sm:w-2/5 p-8 flex items-center justify-center transition-colors duration-500 ${project.bgColor}`}>
-                <div className="relative">
-                  <div className={`absolute inset-0 blur-xl opacity-50 ${project.color}`} />
-                  <project.icon className={`relative w-24 h-24 transition-transform duration-500 group-hover:scale-110 ${project.color} drop-shadow-2xl`} />
+              {/* Screenshot & Preview Container */}
+              <div className="sm:w-5/12 relative overflow-hidden bg-muted/20 border-b sm:border-b-0 sm:border-r border-border/40 min-h-[220px]">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-card/60 opacity-60 group-hover:opacity-20 transition-opacity duration-300" />
+                
+                {/* Floating Category Badge */}
+                <div className="absolute bottom-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-background/90 backdrop-blur-md border border-border/70 shadow-xs">
+                  <project.icon className={`w-3.5 h-3.5 ${project.color}`} />
+                  <span className="text-[11px] font-medium text-foreground/90">{project.category}</span>
                 </div>
               </div>
 
               {/* Content Container */}
-              <div className="sm:w-3/5 p-6 flex flex-col justify-between">
+              <div className="sm:w-7/12 p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 tracking-tight text-foreground/90 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                    <h3 className="text-2xl font-bold tracking-tight text-foreground/90 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    {project.badge && (
+                      <span className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
+                        {project.badge}
+                      </span>
+                    )}
+                  </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
@@ -173,14 +250,16 @@ export const ProjectsSection = () => {
                   >
                     <Github size={16} /> GitHub
                   </a>
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  >
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
+                  {project.demoUrl && project.demoUrl !== "#" && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    >
+                      <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

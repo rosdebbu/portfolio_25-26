@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iotBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0518" />
+      <stop offset="50%" stop-color="#130b2c" />
+      <stop offset="100%" stop-color="#080314" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="violetCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(139, 92, 246, 0.15)" />
+      <stop offset="100%" stop-color="rgba(19, 11, 44, 0.9)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#iotBg)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="1280" height="68" fill="#110926" opacity="0.95" />
+  <line x1="0" y1="68" x2="1280" y2="68" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1" />
+
+  <g transform="translate(60, 20)">
+    <circle cx="16" cy="14" r="14" fill="url(#purpleGrad)" />
+    <path d="M12,14 A4,4 0 0,1 20,14 A8,8 0 0,1 24,14" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="16" cy="14" r="3" fill="#ffffff" />
+    <text x="40" y="21" fill="#faf5ff" font-family="system-ui, sans-serif" font-weight="800" font-size="20">IoT EcoStick</text>
+    <text x="170" y="21" fill="#c084fc" font-family="system-ui, sans-serif" font-weight="500" font-size="12">COASTAL WATER TELEMETRY</text>
+  </g>
+
+  <!-- Status indicator -->
+  <g transform="translate(1030, 20)">
+    <rect width="190" height="30" rx="15" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6" stroke-opacity="0.4" />
+    <circle cx="16" cy="15" r="5" fill="#4ade80" />
+    <text x="30" y="20" fill="#f5d0fe" font-family="system-ui, sans-serif" font-size="12" font-weight="600">ESP32 Online · 10 Hz Sync</text>
+  </g>
+
+  <!-- Top Metrics Bar (4 Gauges) -->
+  <g transform="translate(60, 95)">
+    <!-- Metric 1: pH -->
+    <g transform="translate(0, 0)">
+      <rect width="270" height="120" rx="12" fill="url(#violetCard)" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1" />
+      <text x="20" y="32" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Water pH Balance</text>
+      <text x="20" y="74" fill="#faf5ff" font-family="system-ui, sans-serif" font-weight="800" font-size="34">7.42</text>
+      <rect x="130" y="50" width="85" height="24" rx="12" fill="rgba(74, 222, 128, 0.15)" />
+      <text x="142" y="66" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OPTIMAL</text>
+      <text x="20" y="100" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">Standard Range: 6.5 – 8.5</text>
+    </g>
+
+    <!-- Metric 2: Turbidity -->
+    <g transform="translate(295, 0)">
+      <rect width="270" height="120" rx="12" fill="url(#violetCard)" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1" />
+      <text x="20" y="32" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Turbidity (Clarity)</text>
+      <text x="20" y="74" fill="#faf5ff" font-family="system-ui, sans-serif" font-weight="800" font-size="34">3.12 <tspan font-size="16" fill="#a855f7">NTU</tspan></text>
+      <rect x="165" y="50" width="85" height="24" rx="12" fill="rgba(74, 222, 128, 0.15)" />
+      <text x="180" y="66" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="700">CLEAR</text>
+      <text x="20" y="100" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">Photoelectric scattering sensor</text>
+    </g>
+
+    <!-- Metric 3: Temp -->
+    <g transform="translate(590, 0)">
+      <rect width="270" height="120" rx="12" fill="url(#violetCard)" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1" />
+      <text x="20" y="32" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Water Temperature</text>
+      <text x="20" y="74" fill="#faf5ff" font-family="system-ui, sans-serif" font-weight="800" font-size="34">26.8 <tspan font-size="16" fill="#a855f7">°C</tspan></text>
+      <text x="20" y="100" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">DS18B20 Waterproof Probe</text>
+    </g>
+
+    <!-- Metric 4: Fuzzy Logic Risk -->
+    <g transform="translate(885, 0)">
+      <rect width="275" height="120" rx="12" fill="url(#violetCard)" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1" />
+      <text x="20" y="32" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Fuzzy Degradation Score</text>
+      <text x="20" y="74" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="800" font-size="34">0.14 <tspan font-size="16" fill="#a855f7">/ 1.0</tspan></text>
+      <rect x="175" y="50" width="80" height="24" rx="12" fill="rgba(56, 189, 248, 0.15)" />
+      <text x="188" y="66" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">LOW RISK</text>
+      <text x="20" y="100" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">Rule-based membership matrix</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Real-Time Stream Chart + ESP32 Hardware Console -->
+  <g transform="translate(60, 235)">
+    <!-- Live Wave Sensor Stream -->
+    <rect width="750" height="445" rx="14" fill="#100824" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1" />
+    <text x="30" y="40" fill="#faf5ff" font-family="system-ui, sans-serif" font-weight="700" font-size="16">Real-Time Sensor Fusion Waveform (Chennai Coastline)</text>
+    <text x="30" y="62" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12">128-sample sliding window · Kalman filtered input stream</text>
+
+    <!-- Wave graph -->
+    <g transform="translate(30, 90)">
+      <line x1="0" y1="0" x2="690" y2="0" stroke="rgba(139, 92, 246, 0.2)" stroke-dasharray="3 3" />
+      <line x1="0" y1="75" x2="690" y2="75" stroke="rgba(139, 92, 246, 0.2)" stroke-dasharray="3 3" />
+      <line x1="0" y1="150" x2="690" y2="150" stroke="rgba(139, 92, 246, 0.2)" stroke-dasharray="3 3" />
+      <line x1="0" y1="225" x2="690" y2="225" stroke="rgba(139, 92, 246, 0.2)" stroke-dasharray="3 3" />
+      <line x1="0" y1="300" x2="690" y2="300" stroke="rgba(139, 92, 246, 0.4)" />
+
+      <!-- Sine wave / telemetry curve -->
+      <path d="M0,150 Q45,80 90,150 T180,150 T270,110 T360,170 T450,130 T540,160 T630,120 T690,140" fill="none" stroke="#c084fc" stroke-width="3" />
+      <path d="M0,180 Q45,210 90,180 T180,190 T270,160 T360,200 T450,180 T540,190 T630,170 T690,180" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 3" />
+
+      <!-- Pulse dot -->
+      <circle cx="690" cy="140" r="6" fill="#c084fc" />
+    </g>
+
+    <!-- ESP32 Hardware Console / Codebox -->
+    <g transform="translate(775, 0)">
+      <rect width="385" height="445" rx="14" fill="#080314" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1" />
+      <rect width="385" height="36" rx="14" fill="#150a30" />
+      <circle cx="20" cy="18" r="5" fill="#f87171" />
+      <circle cx="36" cy="18" r="5" fill="#fbbf24" />
+      <circle cx="52" cy="18" r="5" fill="#4ade80" />
+      <text x="80" y="23" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="12">ESP32 Firmware Serial Console</text>
+
+      <g transform="translate(20, 60)" font-family="monospace" font-size="11" fill="#c084fc">
+        <text x="0" y="0" fill="#a855f7">[BOOT] Initializing ESP32 Core...</text>
+        <text x="0" y="24" fill="#a855f7">[I2C] Bus detected at 0x3C (OLED)</text>
+        <text x="0" y="48" fill="#4ade80">[ADC] DS18B20 OneWire: 26.8°C</text>
+        <text x="0" y="72" fill="#4ade80">[ADC] Analog Pin 34 (pH): 2.45V -> pH 7.42</text>
+        <text x="0" y="96" fill="#4ade80">[ADC] Analog Pin 35 (Turb): 3.12 NTU</text>
+        <text x="0" y="120" fill="#38bdf8">[FUZZY] Rule 14 triggered: NormalSalinity</text>
+        <text x="0" y="144" fill="#38bdf8">[FUZZY] Defuzzification (Centroid): 0.14</text>
+        <text x="0" y="168" fill="#e879f9">[MQTT] Publishing payload to broker...</text>
+        <text x="0" y="192" fill="#4ade80">[MQTT] ACK received in 34ms (QoS 1)</text>
+        <text x="0" y="230" fill="#faf5ff">───────────────────────────</text>
+        <text x="0" y="260" fill="#d8b4fe">Telemetry Active. Next poll in 100ms.</text>
+      </g>
+    </g>
+  </g>
+</svg>

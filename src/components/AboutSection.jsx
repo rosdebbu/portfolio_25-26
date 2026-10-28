@@ -35,7 +35,7 @@ export const AboutSection = () => {
                 <span className="text-xl">🔭</span> Exploring astrology and birth chart analysis
               </li>
               <li className="flex gap-3 items-center text-foreground/80 text-base md:text-lg">
-                <span className="text-xl">💻</span> Building open-source projects like CampusCompass and IndiGlam
+                <span className="text-xl">💻</span> Building innovative systems like KisanZess, SatyaPay, and OpenZess
               </li>
             </ul>
 

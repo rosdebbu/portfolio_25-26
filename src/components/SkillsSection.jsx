@@ -32,12 +32,16 @@ const skills = [
   { name: "Vercel", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg", category: "tools" },
 
   // AI & Hardware
-  { name: "Python", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "ai-hardware" },
-  { name: "PyTorch", level: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", category: "ai-hardware" },
-  { name: "LangChain", level: 70, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "ai-hardware" },
-  { name: "C++", level: 65, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", category: "ai-hardware" },
-  { name: "Arduino", level: 60, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg", category: "ai-hardware" },
-  { name: "NumPy", level: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", category: "ai-hardware" },
+  { name: "Python", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "ai-hardware" },
+  { name: "PyTorch", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", category: "ai-hardware" },
+  { name: "Scikit-Learn", level: 82, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg", category: "ai-hardware" },
+  { name: "Gemini & LLMs", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg", category: "ai-hardware" },
+  { name: "Multi-Agent Systems", level: 82, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", category: "ai-hardware" },
+  { name: "LangChain", level: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "ai-hardware" },
+  { name: "C++", level: 70, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", category: "ai-hardware" },
+  { name: "ESP32 & Sensors", level: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg", category: "ai-hardware" },
+  { name: "NumPy & Pandas", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", category: "ai-hardware" },
+  { name: "OpenFOAM & CFD", level: 68, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", category: "ai-hardware" },
 ];
 
 const dailyTools = [
