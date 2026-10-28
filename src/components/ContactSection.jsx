@@ -71,12 +71,22 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary">Touch</span>
+          Let's Build Something <span className="text-primary">Together</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Looking for internships in Software Engineering, Full-Stack, or ML
-          for Summer 2026 and beyond. Open to collaborations and freelance work.
+          I'm looking for Summer 2027 internships in Software Engineering,
+          Full-Stack and AI/ML. Got an idea, a hackathon team or a freelance
+          project? Send me a message, or see what I'm building on{" "}
+          <a
+            href="https://github.com/rosdebbu"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:underline"
+          >
+            GitHub
+          </a>
+          . I usually reply within a day.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

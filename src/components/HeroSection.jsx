@@ -72,13 +72,14 @@ export const HeroSection = ({ onNavClick }) => {
             </h1>
 
             <p className="text-xl md:text-2xl text-primary/80 font-medium opacity-0 animate-fade-in-delay-2">
-              Full-Stack Developer & AI Researcher
+              Full-Stack Developer · AI Researcher · Hackathon Finalist
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-3">
               2nd-year CSE (Data Science) student at SRMIST, Chennai. I build
-              production-grade full-stack applications with real databases, auth
-              systems, and deployment pipelines.
+              production-grade full-stack apps and multi-agent AI systems, from
+              database and auth to deployment. Currently researching Graph
+              Neural Networks and prototyping Edge AI on ESP32.
             </p>
 
             <div className="flex flex-wrap gap-3 opacity-0 animate-fade-in-delay-4">
@@ -94,6 +95,44 @@ export const HeroSection = ({ onNavClick }) => {
               <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
                 Multi-Agent &amp; Edge AI
               </span>
+              <span className="px-3 py-1 text-xs font-medium border rounded-full bg-primary/10 text-primary border-primary/20">
+                Google Cloud Hackathon 2026
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium border rounded-full bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Open to Internships
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-3 opacity-0 animate-fade-in-delay-4">
+              <button
+                onClick={() => onNavClick("projects")}
+                className="px-5 py-2.5 text-sm font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                View Projects
+              </button>
+              <button
+                onClick={() => onNavClick("resume")}
+                className="px-5 py-2.5 text-sm font-medium rounded-full border border-primary/40 text-primary hover:bg-primary/10 transition-colors"
+              >
+                View Resume
+              </button>
+              <button
+                onClick={() => onNavClick("contact")}
+                className="px-5 py-2.5 text-sm font-medium rounded-full border border-primary/40 text-primary hover:bg-primary/10 transition-colors"
+              >
+                Contact Me
+              </button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground opacity-0 animate-fade-in-delay-4">
+              {["React", "Next.js", "FastAPI", "Python", "PostgreSQL", "PyTorch"].map(
+                (tech) => (
+                  <span key={tech} className="font-medium tracking-wide">
+                    {tech}
+                  </span>
+                )
+              )}
             </div>
           </div>
 
